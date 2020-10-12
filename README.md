@@ -2,6 +2,7 @@
 
 A Library for C# to make your life as a developer easier.
 
+
 # Documentation
 ```
 - SimpsLib.Security.Initialize() - checks for potential malicious program
