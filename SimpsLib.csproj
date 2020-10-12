@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65E79909-5296-4600-8D38-7E593D8E9A58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpsLib</RootNamespace>
+    <AssemblyName>SimpsLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HTTP\NetException.cs" />
+    <Compile Include="HTTP\Randomizer.cs" />
+    <Compile Include="HTTP\RequestParams.cs" />
+    <Compile Include="HTTP\Resources.Designer.cs" />
+    <Compile Include="HTTP\Services\Captcha\BaseCaptchaSolver.cs" />
+    <Compile Include="HTTP\Services\Captcha\CaptchaException.cs" />
+    <Compile Include="HTTP\Services\Captcha\CaptchaProxy.cs" />
+    <Compile Include="HTTP\Services\Captcha\ICaptchaSolver.cs" />
+    <Compile Include="HTTP\Services\Captcha\~Services\CapmonsterSolver.cs" />
+    <Compile Include="HTTP\Services\Captcha\~Services\RucaptchaSolver.cs" />
+    <Compile Include="HTTP\Services\Captcha\~Services\TwoCaptchaSolver.cs" />
+    <Compile Include="HTTP\Services\Cloudflare\ChallengeSolution.cs" />
+    <Compile Include="HTTP\Services\Cloudflare\ChallengeSolver.cs" />
+    <Compile Include="HTTP\Services\Cloudflare\CloudflareBypass.cs" />
+    <Compile Include="HTTP\Services\Cloudflare\CloudflareException.cs" />
+    <Compile Include="HTTP\Services\StormWall\StormWallBypass.cs" />
+    <Compile Include="HTTP\Services\StormWall\StormWallException.cs" />
+    <Compile Include="HTTP\Services\StormWall\StormWallSolver.cs" />
+    <Compile Include="HTTP\~Extensions\StringExtensions.cs" />
+    <Compile Include="HTTP\~Http\AdvancedWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HTTP\~Http\CookieFilters.cs" />
+    <Compile Include="HTTP\~Http\CookieStorage.cs" />
+    <Compile Include="HTTP\~Http\Http.cs" />
+    <Compile Include="HTTP\~Http\HttpException.cs" />
+    <Compile Include="HTTP\~Http\HttpExceptionStatus.cs" />
+    <Compile Include="HTTP\~Http\HttpHeader.cs" />
+    <Compile Include="HTTP\~Http\HttpMethod.cs" />
+    <Compile Include="HTTP\~Http\HttpRequest.cs" />
+    <Compile Include="HTTP\~Http\HttpResponse.cs" />
+    <Compile Include="HTTP\~Http\HttpStatusCode.cs" />
+    <Compile Include="HTTP\~Http\~Content\BytesContent.cs" />
+    <Compile Include="HTTP\~Http\~Content\FileContent.cs" />
+    <Compile Include="HTTP\~Http\~Content\FormUrlEncodedContent.cs" />
+    <Compile Include="HTTP\~Http\~Content\HttpContent.cs" />
+    <Compile Include="HTTP\~Http\~Content\MultipartContent.cs" />
+    <Compile Include="HTTP\~Http\~Content\StreamContent.cs" />
+    <Compile Include="HTTP\~Http\~Content\StringContent.cs" />
+    <Compile Include="HTTP\~Http\~Misc\DownloadProgressChangedEventArgs.cs" />
+    <Compile Include="HTTP\~Http\~Misc\UploadProgressChangedEventArgs.cs" />
+    <Compile Include="HTTP\~Internal\ExceptionHelper.cs" />
+    <Compile Include="HTTP\~Internal\ProgressStreamContent.cs" />
+    <Compile Include="HTTP\~Internal\ProxyHelper.cs" />
+    <Compile Include="HTTP\~Proxy\HttpProxyClient.cs" />
+    <Compile Include="HTTP\~Proxy\ProxyClient.cs" />
+    <Compile Include="HTTP\~Proxy\ProxyException.cs" />
+    <Compile Include="HTTP\~Proxy\ProxyType.cs" />
+    <Compile Include="HTTP\~Proxy\Socks4aProxyClient.cs" />
+    <Compile Include="HTTP\~Proxy\Socks4ProxyClient.cs" />
+    <Compile Include="HTTP\~Proxy\Socks5ProxyClient.cs" />
+    <Compile Include="Security.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HTTP\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
