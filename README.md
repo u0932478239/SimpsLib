@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/yungsamzy/simpslib/badge)](https://www.codefactor.io/repository/github/yungsamzy/simpslib)
+
 # Info
 
 A Library for C# to make your life as a developer easier.
